@@ -13,11 +13,13 @@
             <form id="calorie-counter"></form>
                 <label for="budget">Budget</label>
                 <input id="budget" type="number" min="0" placeholder="Daily calorie budget" required/>
-<!-- Added the following attributed to my input element:
-- type attribute set to number to only allow numeric inputs
-- min attribute set to 0 to only allow positive numbers
-- placeholder attribute set to Daily calorie budget
-Then I marked the input element as REQUIRED -->
+                <fieldset id="breakfast">
+                    <legend>Breakfast</legend>
+                    <div class="input-container"></div>
+                  </fieldset>
+<!-- In my form, users should have the capability to add various meal types along with their calorie -->
+<!-- counts. I created a fieldset element with the id="breakfast". Within that element, I created a -->
+<!-- legend with the text Breakfast, and an empty div with the class set to input-container. -->
         </div>
     </main>
 </body>
