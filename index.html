@@ -16,31 +16,45 @@
                 <fieldset id="breakfast">
                     <legend>Breakfast</legend>
                     <div class="input-container"></div>
-                  </fieldset>
-                  <fieldset id="lunch">
+                </fieldset>
+                <fieldset id="lunch">
                     <legend>Lunch</legend>
                     <div class="input-container"></div>
-                  </fieldset>
-                  <fieldset id="dinner">
+                </fieldset>
+                <fieldset id="dinner">
                     <legend>Dinner</legend>
                     <div class="input-container"></div>
-                  </fieldset>
-                  <fieldset id="snacks">
+                </fieldset>
+                <fieldset id="snacks">
                     <legend>Snacks</legend>
                     <div class="input-container"></div>
-                   </fieldset>
-                   <fieldset id="exercise">
+                </fieldset>
+                <fieldset id="exercise">
                     <legend>Exercise</legend>
                     <div class="input-container"></div>
-                   </fieldset>
-                   <div class="controls">
-                    <span></span>
-                  </div>
+                </fieldset>
+                <div class="controls">
+                    <span>
+                        <label for="entry-dropdown">Add food or exercise:</label>
+                        <select id="entry-dropdown" name="options">
+                            <option value="breakfast" selected>Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="snacks">Snacks</option>
+                            <option value="exercise">Exercise</option>
+                        </select>
+                        <button type="button" id="add-entry">Add Entry</button>
+                    </span>
+                </div>
+<!-- My select menu needed options for each of the food and exercise fieldset elements I created in the 
+    previous steps. I used the option element to create a new option for each fieldset. The value
+    attribute of each option is the ID of the fieldset, and the text of each option is the text of the 
+    legend. I also set the Breakfast option as the SELECTED option using the SELECTED attribute.
+    
+    The SELECT element creates a dropdown menu. The OPTION attribute creates each of the options within 
+that dropdown menu. You need to assign the option with a value and text that shows to the user
+(so the orange is the value and the white is the text). The values are linked to the fieldset IDs.-->
             </form>
-<!-- Moved the FORM's closing tag to encompass everything I had been adding since it's all supposed
-to be inside the form. Also created a div element and assigned it a class attribute and nested a span element 
-inside this div. This is setting it up so when users can select a meal type to input their calorie caounts,
-they'll be presented with a dropdown menu and a button to add the meal type. -->
         </div>
     </main>
 </body>
