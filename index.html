@@ -10,7 +10,7 @@
     <main>
         <h1>Calorie Counter</h1>
         <div class="container">
-            <form id="calorie-counter"></form>
+            <form id="calorie-counter">
                 <label for="budget">Budget</label>
                 <input id="budget" type="number" min="0" placeholder="Daily calorie budget" required/>
                 <fieldset id="breakfast">
@@ -33,7 +33,14 @@
                     <legend>Exercise</legend>
                     <div class="input-container"></div>
                    </fieldset>
-<!-- Added 2 more fieldset code blocks -->
+                   <div class="controls">
+                    <span></span>
+                  </div>
+            </form>
+<!-- Moved the FORM's closing tag to encompass everything I had been adding since it's all supposed
+to be inside the form. Also created a div element and assigned it a class attribute and nested a span element 
+inside this div. This is setting it up so when users can select a meal type to input their calorie caounts,
+they'll be presented with a dropdown menu and a button to add the meal type. -->
         </div>
     </main>
 </body>
