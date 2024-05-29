@@ -46,14 +46,14 @@
                         <button type="button" id="add-entry">Add Entry</button>
                     </span>
                 </div>
-<!-- My select menu needed options for each of the food and exercise fieldset elements I created in the 
-    previous steps. I used the option element to create a new option for each fieldset. The value
-    attribute of each option is the ID of the fieldset, and the text of each option is the text of the 
-    legend. I also set the Breakfast option as the SELECTED option using the SELECTED attribute.
-    
-    The SELECT element creates a dropdown menu. The OPTION attribute creates each of the options within 
-that dropdown menu. You need to assign the option with a value and text that shows to the user
-(so the orange is the value and the white is the text). The values are linked to the fieldset IDs.-->
+                <div>
+                    <button type="submit">Calculate Remaining Calories</button>
+                    <button id="clear" type="button">Clear</button>
+                </div>
+<!-- Created another div element. Within it, I nested a button to submit the form. This button has the text
+"Calculating Remaining Calories". I set the type attribute to "submit" so it will submit to the form.
+Then I added a button with the ID="clear" to clear the form and the type attribute set to "button" to 
+prevent it from submitting the form. It also has the text "clear". -->
             </form>
         </div>
     </main>
