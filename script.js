@@ -7,10 +7,15 @@ const output = document.getElementById('output');
 let isError = false;
 
 function cleanInputString (str){
-    const regex = /\+-\s/;
+    const regex = /[+-\s]/;
 }
 
-// In regex, shorthand character classes allow you to match specific characters without having to write those
-// characters in your pattern. Shorthand character classes are preceded with a backslash \. NOTE that 
-// the other backslash (\+) is used to escape something (the computer's meaning of +). 
-// The character class \s will match any whitespace character, so I added this to my regex pattern.
+// The former pattern /\+-\s/ looked for +, -, and a space IN ORDER. This would match    +- hello
+// but would not match     +hello.
+// To tell the pattern to match each of these characters individually, you need to turn them into a 
+// character class. This is done by wrapping the characters you want to match in brackets. For example, this 
+// pattern will match the characters    h, e, l, OR o:
+// const regex = /[helo]/;
+
+// So, I wrapped my pattern in brackets to search for the +, -, and space individually. 
+// NOTE:   I no longer need to escape the + character, because I am using a character class.
