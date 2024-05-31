@@ -7,15 +7,12 @@ const output = document.getElementById('output');
 let isError = false;
 
 function cleanInputString (str){
+    const regex = /hello/;
 }
 
-// When users input their daily calorie budget, the input field will only accept numerical values. 
-// However, if a number is entered with a + or - sign, I'll need to remove those characters. So, I declared
-// a cleanInputString function that takes a str parameter.
-
-// I know str = string, but I'm pretty sure 
-// it's not a js thing, but a variable thing? And I haven't created the variable yet? I'll learn as we go on.
-
-// NOTE: Values from an HTML input field are received as strings in js. I'll need to convert these strings into
-// numbers before performing any calculations. Converting string values into numbers will be covered in a 
-// future step.
+// To match specific characters in a string, you can use Regular Expressions or "regex" for short (Notice the
+// color of it is darker than const or let variables).
+// Regex in JS is indicated by a pattern wrapped in forward slashes. The example above matches the 
+// string literal "hello".
+// In future steps, I'll update this regex pattern to match specific characters needed for the calorie
+// counter.
