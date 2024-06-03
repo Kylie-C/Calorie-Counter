@@ -12,10 +12,9 @@ function cleanInputString(str) {
 }
 
 function isInvalidInput(str){
-  const regex = /[0-9]e[0-9]/i;
+  const regex = /[0-9]+e[0-9]+/i;
 }
 
-// Number inputs only allow the e (exponent) to occur between two digits. To match any number, you can use
-// the character class [0-9]. This will match any digit between 0 and 9.
-// I added this character class before and after e in my pattern. This is specifying what the two digits can
-// be. The first must be between 0-9, and the second as well. So no 11e.31.
+// The + modifier in a regex allows you to match a pattern that occurs one or more times. To match my digit
+// pattern one or more times, I added a plus after each of the digit characters. 
+// As of now, I don't fully understand why this is needed for this calorie counter. 
