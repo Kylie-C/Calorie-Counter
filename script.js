@@ -12,10 +12,10 @@ function cleanInputString(str) {
 }
 
 function isInvalidInput(str){
-  const regex = /e/i;
+  const regex = /[0-9]e[0-9]/i;
 }
 
-// The e in a number input can also be an uppercase E. Regex has a flag for this, however - the i flag, 
-// which stands for "insensitive".
-// If the regex were    /Hello/i    it would match hello, Hello, HELLO, and even hElLo because of the i flag.
-// This flag makes your pattern case-sensitive.
+// Number inputs only allow the e (exponent) to occur between two digits. To match any number, you can use
+// the character class [0-9]. This will match any digit between 0 and 9.
+// I added this character class before and after e in my pattern. This is specifying what the two digits can
+// be. The first must be between 0-9, and the second as well. So no 11e.31.
