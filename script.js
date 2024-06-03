@@ -12,9 +12,8 @@ function cleanInputString(str) {
 }
 
 function isInvalidInput(str){
-  const regex = /[0-9]+e[0-9]+/i;
+  const regex = /\d+e\d+/i;
 }
 
-// The + modifier in a regex allows you to match a pattern that occurs one or more times. To match my digit
-// pattern one or more times, I added a plus after each of the digit characters. 
-// As of now, I don't fully understand why this is needed for this calorie counter. 
+// There is a shorthand character class to match any digit \d. I replaced my [0-9] character classes with
+// this shorthand. The + modifier needed to stay to keep matching my digit pattern one or more times.
