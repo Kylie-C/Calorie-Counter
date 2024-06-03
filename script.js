@@ -12,18 +12,15 @@ function cleanInputString(str) {
 }
 
 function isInvalidInput(str){
-  const regex = /\d+e\d+/i; //"regex" is the variable name. The actual regex is /\d+e\d+/i, where i is 
-  //insensitive to capitalizations.
+  const regex = /\d+e\d+/i; 
   return str.match(regex);
 }
 
-// Strings have a .match() method, which takes a regex argument. .match() will return an array of match results
-// - containing either the first match, or all matches if the global flag is used.
-// Example:
-// const str = 'example string';
-// const regex = /example/;
-// const result = str.match(regex);   //Returns ['example']. But idk why const is on this line? It doesn't
-    // need to be in my code.
+console.log(isInvalidInput("1e3"))
 
-// In my code, I returned the result of calling the .match() method on str and passed my regex variable as
-// the argument. I'll use this match result later on.
+// Testing my isInvalidInput function. I want to check if the function can detect scientific notation like 
+// 1e3 or 10e2. While this is a valid way to represent numbers, it's not a valid input for my calorie
+// counter project. 
+// The console.log() must go outside and below the function itself to test it.
+
+// The console output shows as ['1e3, index: 0, input: '1e3', groups: undefined]
