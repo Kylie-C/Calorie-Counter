@@ -16,5 +16,8 @@ function isInvalidInput(str){
   return str.match(regex);
 }
 
+function addEntry(){ 
+}
 
-// Finished testing the isInvalidInput(){} function, so I removed the console.log.
+// My next step is to allow users to add entries to the calorie counter, so I declared an empty function
+// with no parameters.
