@@ -10,4 +10,7 @@ function cleanInputString(str) {
     const regex = /[+-\s]/g; 
     return str.replace(regex, "");
   }
-// Since I finished testing the cleanInputString(){} function, I removed the console.log's.
+
+function isInvalidInput(str){}
+// In HTML, number inputs allow for exponential notation (such as 1e10). I need to filter those out, so I'm 
+// starting by creating a new function that will do so.
