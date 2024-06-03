@@ -12,5 +12,8 @@ function cleanInputString(str) {
   }
 
 function isInvalidInput(str){}
-// In HTML, number inputs allow for exponential notation (such as 1e10). I need to filter those out, so I'm 
-// starting by creating a new function that will do so.
+  const regex = /e/;
+
+// I declared a regex variable (again, regex is the NAME of this variable and COULD be named anything. I'm
+// just naming it regex to help me understand what the // is [it's the actual regex]) and assigned it a 
+// regex that matches the character e, which means exponent"
