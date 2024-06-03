@@ -11,9 +11,7 @@ function cleanInputString(str) {
     return str.replace(regex, "");
   }
 
-function isInvalidInput(str){}
+function isInvalidInput(str){
   const regex = /e/;
-
-// I declared a regex variable (again, regex is the NAME of this variable and COULD be named anything. I'm
-// just naming it regex to help me understand what the // is [it's the actual regex]) and assigned it a 
-// regex that matches the character e, which means exponent"
+}
+// Moved the ending bracket so the regex was INSIDE of the function, not outside.
