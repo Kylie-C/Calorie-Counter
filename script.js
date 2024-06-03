@@ -9,9 +9,13 @@ let isError = false;
 function cleanInputString(str) { 
     const regex = /[+-\s]/g; 
     return str.replace(regex, "");
-  }
+}
 
 function isInvalidInput(str){
-  const regex = /e/;
+  const regex = /e/i;
 }
-// Moved the ending bracket so the regex was INSIDE of the function, not outside.
+
+// The e in a number input can also be an uppercase E. Regex has a flag for this, however - the i flag, 
+// which stands for "insensitive".
+// If the regex were    /Hello/i    it would match hello, Hello, HELLO, and even hElLo because of the i flag.
+// This flag makes your pattern case-sensitive.
