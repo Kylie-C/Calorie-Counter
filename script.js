@@ -19,16 +19,8 @@ function isInvalidInput(str){
 function addEntry(){ 
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
     const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+    const HTMLString = ``;
 }
 
-// Each entry will have a text input for the entry's name, and a number input for the calories. To get a count
-// of the number of entries (how many times the user inputs?), I can query by text inputs. 
-    // NOTE: you cannot query by number inputs, as you have an extra number input for the user's calori 
-    // budget.
-
-// I padded the string 'input[type="text"]' to the querySelectorAll() method. I had to use single quotes
-// for my string, so that I could use the double quotes within it.
-
-// This will return a NodeList of all the text inputs in the form. I then accessed the length property
-// of the NodeList (I did this by adding '.length' to the end of the querySelectorAll() method) to get
-// the number of entries.
+// Now I need to build my dynamic HTML string to add to the webpage. I declared a new HTMLString 
+// variable, and assigned it an empty template literal string ``.
