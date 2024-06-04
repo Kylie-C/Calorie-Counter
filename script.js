@@ -19,8 +19,10 @@ function isInvalidInput(str){
 function addEntry(){ 
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
     const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
-    const HTMLString = `<label>Entry ${entryNumber} Name</label>`;
+    const HTMLString = `<label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>`;
 }
 
-// Inside my template literal, I created a label element (just like I would in HTML) and gave it the text
-// Entry # Name. Using my template literal syntax, I replaced # with the value of entryNumber.
+// Gave my label element a for attribute (attributes go inside the <>'s) with the value X-#-name, where X is
+// the value of the entryDropdown element (I have to add .value because it has numerous values stated in the
+// HTML) and # is the value of entryNumber.
+// Remember that HTML attributes should be wrapped in double quotes.
