@@ -1,7 +1,6 @@
 const calorieCounter = document.getElementById('calorie-counter');
 const budgetNumberInput = document.getElementById('budget');
 const entryDropdown = document.getElementById('entry-dropdown');
-// Here's where I queried it!
 const addEntryButton = document.getElementById('add-entry');
 const clearButton = document.getElementById('clear');
 const output = document.getElementById('output');
@@ -19,12 +18,19 @@ function isInvalidInput(str){
 
 function addEntry(){ 
     const targetId = "#" + entryDropdown.value;
+// # = ID
+// entryDropdown is an ID element in HTML with value options of: breakfast, lunch, dinner, snacks, exercise.
+    const targetInputContainer = document.querySelector(targetId + ' .input-container');
+// Once the targetId has been selected, it'll be followed by ' .input-container'. Not sure why 
+// it needs a space before the .input-container, as this looks like it'll show as a string?
 }
 
-// I need to know which category the entry goes in. Luckily, I added a dropdown for the user to select a 
-// category. Earlier, I queried (linked?) that dropdown earlier in your JS and assigned it to the 
-// entryDropdown button. I can use the .value property to get the value of the selected option.
+// Now I need to target the .input-container element (look in HTML) element WITHIN the element that has your 
+// targetId (the user will select it [breakfast, lunch, etc] and that targetId will determin which 
+// .input-container I'm targeting).
+// I declared a new targetInputContainer variable, and assigned it the value of document.querySelector() 
+// (this method returns the first element within the document that matches the specified selector, or group
+// of selectors. If no matches are found, null is returned). 
+// I used concatenation to seperate targetId and ' .input-container' and passed that string to querySelector().
 
-// I used concatenation to add a # to the beginning of the .value property of entryDropdown, and assigned
-// that result to a targetId variable.
-// Sing the "#" is a string, I imagine it will show as #USER-SELECTION (e.g., #Breakfast).
+// Not sure why it needs a space before the .input-container, as this looks like it'll show as a string?
