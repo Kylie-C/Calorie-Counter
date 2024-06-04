@@ -19,8 +19,8 @@ function isInvalidInput(str){
 function addEntry(){ 
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
     const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
-    const HTMLString = ``;
+    const HTMLString = `<label>Entry ${entryNumber} Name</label>`;
 }
 
-// Now I need to build my dynamic HTML string to add to the webpage. I declared a new HTMLString 
-// variable, and assigned it an empty template literal string ``.
+// Inside my template literal, I created a label element (just like I would in HTML) and gave it the text
+// Entry # Name. Using my template literal syntax, I replaced # with the value of entryNumber.
