@@ -18,7 +18,14 @@ function isInvalidInput(str){
 
 function addEntry(){ 
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
+    const entryNumber = targetInputContainer.querySelectorAll();
 }
 
-// Thanks to template literals, you actually don't need the targetId variable at all. I removed that variable
-// and updated my template literal to replace targetId with entryDropdown.value and added the # before that.
+// I will want to number the entries a user adds. To get all of the number inputs, I used the 
+// querySelectorAll() method.
+
+// The querySelectorAll() method returns a NodeList of all the elements that match the selector. A NodeList
+// is an array-like object, so I can access the elements using bracket notation.
+
+// I declared an entryNumber variable and gave it the value of targetInputContainer.querySelectorAll(). I 
+// don't need to pass an argument to the query selector yet.
