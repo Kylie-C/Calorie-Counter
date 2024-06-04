@@ -18,19 +18,7 @@ function isInvalidInput(str){
 
 function addEntry(){ 
     const targetId = "#" + entryDropdown.value;
-// # = ID
-// entryDropdown is an ID element in HTML with value options of: breakfast, lunch, dinner, snacks, exercise.
     const targetInputContainer = document.querySelector(targetId + ' .input-container');
-// Once the targetId has been selected, it'll be followed by ' .input-container'. Not sure why 
-// it needs a space before the .input-container, as this looks like it'll show as a string?
 }
 
-// Now I need to target the .input-container element (look in HTML) element WITHIN the element that has your 
-// targetId (the user will select it [breakfast, lunch, etc] and that targetId will determin which 
-// .input-container I'm targeting).
-// I declared a new targetInputContainer variable, and assigned it the value of document.querySelector() 
-// (this method returns the first element within the document that matches the specified selector, or group
-// of selectors. If no matches are found, null is returned). 
-// I used concatenation to seperate targetId and ' .input-container' and passed that string to querySelector().
-
-// Not sure why it needs a space before the .input-container, as this looks like it'll show as a string?
+// Accidently removed the closing bracket, so I readded it.
