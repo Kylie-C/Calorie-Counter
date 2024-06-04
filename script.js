@@ -18,14 +18,17 @@ function isInvalidInput(str){
 
 function addEntry(){ 
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
-    const entryNumber = targetInputContainer.querySelectorAll();
+    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
 }
 
-// I will want to number the entries a user adds. To get all of the number inputs, I used the 
-// querySelectorAll() method.
+// Each entry will have a text input for the entry's name, and a number input for the calories. To get a count
+// of the number of entries (how many times the user inputs?), I can query by text inputs. 
+    // NOTE: you cannot query by number inputs, as you have an extra number input for the user's calori 
+    // budget.
 
-// The querySelectorAll() method returns a NodeList of all the elements that match the selector. A NodeList
-// is an array-like object, so I can access the elements using bracket notation.
+// I padded the string 'input[type="text"]' to the querySelectorAll() method. I had to use single quotes
+// for my string, so that I could use the double quotes within it.
 
-// I declared an entryNumber variable and gave it the value of targetInputContainer.querySelectorAll(). I 
-// don't need to pass an argument to the query selector yet.
+// This will return a NodeList of all the text inputs in the form. I then accessed the length property
+// of the NodeList (I did this by adding '.length' to the end of the querySelectorAll() method) to get
+// the number of entries.
