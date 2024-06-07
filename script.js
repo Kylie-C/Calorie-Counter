@@ -36,25 +36,24 @@ function addEntry(){
         targetInputContainer.innerHTML += HTMLString;
 }
 
+addEntryButton.addEventListener("click", addEntry);
 
-// To see my new HTML content for the targetInputContainer, I will need to use the innerHTML property. The
-// innerHTML property sets or returns the HTML content inside an element.
+// In the Role Playing Game project, I learned how to set a button's behavior by editing its onclick
+// property. I can also edit an element's behavior by adding an event listener. The following example
+// uses the addEventListener method to add a click to a button. When the button is clicked, the printName
+// function is called.
 
-// Here is a form element with a label and input element nested inside:
-    // <form id="form">
-        // <label for="first-name">First name</label>
-        // <input id="first-name" type="text">
-    // </form>
+//     <button class="btn">Print name</button>
+//     const button = document.querySelector('.btn');
+//     function printName() {
+//       console.log("Jessica");
+//     }
+//     button.addEventListener('click', printName);
 
-// If I want to add another label and input element inside the form, then I can use the innerHTML property
-// as shown below:
+// The addEventListener method takes two arguments. The first is the event to listen to (Eg., 'click'). The
+// 2nd is the callback function, or the function that runs when the event is triggered.
 
-    // const formElement = document.getElementById("form");
-    // const formContent = `
-        // <label for="last-name">Last name</label>
-        // <input id="last-name" type="text">
-    // `;
-    // formElement.innerHTML += formContent;
+// So, I called the addEventListener() method on the addEntryButton (variable declared on line 4). I passed
+// in the string "click" for the 1st argument and the addEntry function for the second argument.
 
-// So, I used the addition assignment operator += to append my HTMLString variable to 
-// targetInputContainer.innerHTML
+// NOTE that I should not CALL addEntry, but pass the variable (or function reference) directly.
