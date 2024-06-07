@@ -33,11 +33,28 @@ function addEntry(){
             placeholder="Calories" 
             id="${entryDropdown.value}-${entryNumber}-calories"
         />`;
+        targetInputContainer.innerHTML += HTMLString;
 }
 
 
-// On a new line after my 2nd label, I created another input element. I gave it a type attribute set to number
-// a min attribute set to 0 (to ensure negative calories cannot be added), a placeholder attribute set to 
-// Calories, and an id attribute that matches the for attribute of my 2nd label element.
+// To see my new HTML content for the targetInputContainer, I will need to use the innerHTML property. The
+// innerHTML property sets or returns the HTML content inside an element.
 
-// Also moved the closing backtick of the first lavel element and reorganized.
+// Here is a form element with a label and input element nested inside:
+    // <form id="form">
+        // <label for="first-name">First name</label>
+        // <input id="first-name" type="text">
+    // </form>
+
+// If I want to add another label and input element inside the form, then I can use the innerHTML property
+// as shown below:
+
+    // const formElement = document.getElementById("form");
+    // const formContent = `
+        // <label for="last-name">Last name</label>
+        // <input id="last-name" type="text">
+    // `;
+    // formElement.innerHTML += formContent;
+
+// So, I used the addition assignment operator += to append my HTMLString variable to 
+// targetInputContainer.innerHTML
