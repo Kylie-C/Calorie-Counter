@@ -18,7 +18,13 @@ function isInvalidInput(str){
 
 function addEntry(){ 
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
-    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
+// I tried adding a couple of entries to the Breakfast category and noticed some bugs. The first thing I 
+// needed to fix is the entry counts - the 1st entry should have a count of 1, not 0.
+
+// This bug occurs because I am querying for input[type="text"] elements BEFORE adding the new entry to the
+// page. To fix this, I updated my entryNumber variable to be the value of the length of the query plus 1.
+// I added this on my declaration line, not in my template strings.
     const HTMLString = `
         <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
         <input 
@@ -37,23 +43,3 @@ function addEntry(){
 }
 
 addEntryButton.addEventListener("click", addEntry);
-
-// In the Role Playing Game project, I learned how to set a button's behavior by editing its onclick
-// property. I can also edit an element's behavior by adding an event listener. The following example
-// uses the addEventListener method to add a click to a button. When the button is clicked, the printName
-// function is called.
-
-//     <button class="btn">Print name</button>
-//     const button = document.querySelector('.btn');
-//     function printName() {
-//       console.log("Jessica");
-//     }
-//     button.addEventListener('click', printName);
-
-// The addEventListener method takes two arguments. The first is the event to listen to (Eg., 'click'). The
-// 2nd is the callback function, or the function that runs when the event is triggered.
-
-// So, I called the addEventListener() method on the addEntryButton (variable declared on line 4). I passed
-// in the string "click" for the 1st argument and the addEntry function for the second argument.
-
-// NOTE that I should not CALL addEntry, but pass the variable (or function reference) directly.
