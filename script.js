@@ -19,12 +19,6 @@ function isInvalidInput(str){
 function addEntry(){ 
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
     const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
-// I tried adding a couple of entries to the Breakfast category and noticed some bugs. The first thing I 
-// needed to fix is the entry counts - the 1st entry should have a count of 1, not 0.
-
-// This bug occurs because I am querying for input[type="text"] elements BEFORE adding the new entry to the
-// page. To fix this, I updated my entryNumber variable to be the value of the length of the query plus 1.
-// I added this on my declaration line, not in my template strings.
     const HTMLString = `
         <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
         <input 
@@ -39,7 +33,14 @@ function addEntry(){
             placeholder="Calories" 
             id="${entryDropdown.value}-${entryNumber}-calories"
         />`;
-        targetInputContainer.innerHTML += HTMLString;
+        targetInputContainer.insertAdjacentHTML();
 }
 
 addEntryButton.addEventListener("click", addEntry);
+
+// My other bug occurs if I add a Breakfast entry, fill it in, then try adding a 2nd Breakfast entry - the
+// values I added disappeared.
+
+// This is because I am updating the innerHTML directly, which does not preserve my input content. So I
+// changed the innerHTML assignment to use the insertAdjacentHTML() method of targetInputContainer instead
+// and didn't pass any arguments yet. 
