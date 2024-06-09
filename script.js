@@ -33,14 +33,15 @@ function addEntry(){
             placeholder="Calories" 
             id="${entryDropdown.value}-${entryNumber}-calories"
         />`;
-        targetInputContainer.insertAdjacentHTML();
+        targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
+// The insertAdjacentHtml method takes two arguments. The first argument is a string that specifies the 
+// position of the inserted element. The second argument is a string containing the HTML to be inserted.
+
+// For the 1st argument, I passed the string "beforeend" to insert the new element as the last child of
+// targetInputContainer.
+
+// For the 2nd argument, I passed the HTMLString variable.
+
 addEntryButton.addEventListener("click", addEntry);
-
-// My other bug occurs if I add a Breakfast entry, fill it in, then try adding a 2nd Breakfast entry - the
-// values I added disappeared.
-
-// This is because I am updating the innerHTML directly, which does not preserve my input content. So I
-// changed the innerHTML assignment to use the insertAdjacentHTML() method of targetInputContainer instead
-// and didn't pass any arguments yet. 
