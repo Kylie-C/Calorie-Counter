@@ -39,25 +39,14 @@ function addEntry(){
 function getCaloriesFromInputs(list){
     let calories = 0;
     for (const item of list) {
+        const currVal = item.value;
     }
 }
 
-// The list parameter is going to be the result of a query selector, which will return a NodeList. A NodeList
-// is a list of elements like an array. It contains the elements that match the query selector. I will need
-// to loop through these elements in the list.
+// The NodeList values I will pass to list will consist of input elements (what the user inputs). So I will 
+// want to look at the value attribute of each element. 
 
-// In previous steps, I learned how to loop through an array using a for loop. I can also use a for...of loop
-// to loop through an array AND a NodeList.
-
-// A for...of loop is used to iterate (repeat a set of instructions) over elements in an iterable object 
-// like an array. The variable declared in the loop represents the current element being iterated over.
-
-    // for (const element of elementArray){
-        // console.log(element);
-    // }
-
-// I created a for...of loop that loops through the list. For the loop's variable name, I used const to declare
-// a variable called item.
+// I assigned item.value to a const variable called currVal.
 
 addEntryButton.addEventListener("click", addEntry);
 
