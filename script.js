@@ -36,15 +36,12 @@ function addEntry(){
         targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
-function getCaloriesFromInputs(list){}
+function getCaloriesFromInputs(list){
+    let calories = 0;
+}
 
-// Now I can add entries without losing my previous inputs!
-
-// I'm starting to write a function that will get the calorie counts from the user's entries. I declared a 
-// getCaloriesFromInputs function and gave it a parameter called list.
-
-// Remember that parameters are placeholders with a name; not a value. So when I call the function, I'll
-// input the value of what "list" is.
+// Declared a calories variable and assigned it the value 0. I used let to declare it, since I'll be 
+// reassigning it later.
 
 addEntryButton.addEventListener("click", addEntry);
 
