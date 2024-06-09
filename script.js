@@ -36,12 +36,15 @@ function addEntry(){
         targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
-// The insertAdjacentHtml method takes two arguments. The first argument is a string that specifies the 
-// position of the inserted element. The second argument is a string containing the HTML to be inserted.
+function getCaloriesFromInputs(list){}
 
-// For the 1st argument, I passed the string "beforeend" to insert the new element as the last child of
-// targetInputContainer.
+// Now I can add entries without losing my previous inputs!
 
-// For the 2nd argument, I passed the HTMLString variable.
+// I'm starting to write a function that will get the calorie counts from the user's entries. I declared a 
+// getCaloriesFromInputs function and gave it a parameter called list.
+
+// Remember that parameters are placeholders with a name; not a value. So when I call the function, I'll
+// input the value of what "list" is.
 
 addEntryButton.addEventListener("click", addEntry);
+
