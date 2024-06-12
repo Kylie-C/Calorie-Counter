@@ -39,14 +39,13 @@ function addEntry(){
 function getCaloriesFromInputs(list){
     let calories = 0;
     for (const item of list) {
-        const currVal = item.value;
+        const currVal = cleanInputString(item.value);
     }
 }
 
-// The NodeList values I will pass to list will consist of input elements (what the user inputs). So I will 
-// want to look at the value attribute of each element. 
-
-// I assigned item.value to a const variable called currVal.
+// Earlier I wrote a function to clean the user's input by removing any +, -, or spaces from their entry.
+// I need to use that function here, so I updated my currVal declaration to be the result of calling 
+// cleanInputString with item.value. To do this, I passed item.value as the argument.
 
 addEntryButton.addEventListener("click", addEntry);
 
