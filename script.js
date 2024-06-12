@@ -41,14 +41,25 @@ function getCaloriesFromInputs(list){
     for (const item of list) {
         const currVal = cleanInputString(item.value);
         const invalidInputMatch = isInvalidInput(currVal);
+        if (invalidInputMatch){
+        }
     }
 }
 
-// I need to confirm the input is valid, so I declared an invalidInputMatch variable and assigned it the
-// result of calling my isInvalidInput function with currVal as the argument. 
+// My isInvalidInput function returns String.match, which is an array of matches or null if no matches are 
+// found. 
 
-// The isInvalidInput function uses currVal (which is using the cleanInputString function that's pushing
-// the item values from the nodeList). All this gets stored in the invalidInputMatch variable.
+// In JS, values can either be truthy or falsy. A value is truthy if it evaluates to TRUE when converted
+// to a Boolean. A value is falsy if it evaluates to FALSE when converted to a Boolean. Null is an example
+// of a falsy value.
+
+// So, I needed to check if invalidInputMatch is truthy. I did this by passing the variable directly to my if
+// condition (without a comparison operator). Here's another example of checking the truthiness of helloWorld.
+
+// if (helloWorld) {
+// }
+
+// So, I added an if statement that checks if invalidInputMatch is truthy.
 
 addEntryButton.addEventListener("click", addEntry);
 
