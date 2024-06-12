@@ -40,12 +40,15 @@ function getCaloriesFromInputs(list){
     let calories = 0;
     for (const item of list) {
         const currVal = cleanInputString(item.value);
+        const invalidInputMatch = isInvalidInput(currVal);
     }
 }
 
-// Earlier I wrote a function to clean the user's input by removing any +, -, or spaces from their entry.
-// I need to use that function here, so I updated my currVal declaration to be the result of calling 
-// cleanInputString with item.value. To do this, I passed item.value as the argument.
+// I need to confirm the input is valid, so I declared an invalidInputMatch variable and assigned it the
+// result of calling my isInvalidInput function with currVal as the argument. 
+
+// The isInvalidInput function uses currVal (which is using the cleanInputString function that's pushing
+// the item values from the nodeList). All this gets stored in the invalidInputMatch variable.
 
 addEntryButton.addEventListener("click", addEntry);
 
