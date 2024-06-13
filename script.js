@@ -43,16 +43,18 @@ function getCaloriesFromInputs(list){
         const invalidInputMatch = isInvalidInput(currVal);
         if (invalidInputMatch) {
             alert(`Invalid Input: ${invalidInputMatch[0]}`)
+            isError = true;
+            return null;
+// In programming, null is meant to represet the absense of a value. In this case, if the user enters an
+// invalid input, you want to alert them and then return null to indicate that the function has failed.
+
+// Still within my if block, I set isError (which was previously set to false at the top) to true and returned
+// null. Since variables set within functions only exist within that function, that means in THIS function,
+// isError will equal true, but outside of this function, it will equal false.
         }
     }
 }
 
-// Browsers have a built in alert() function, which you can use to display a pop-up message to the user. The 
-// message to display is passed as the argument to the alert(ARGUMENT) function.
-
-// Using a template literal (which let's me insert multiple strings and variable information inside the ${}),
-// in my if block, I called the alert() function to tell the user "Invalid Input: ", followed by the first
-// value in the invalidInputMatch array [0].
 
 addEntryButton.addEventListener("click", addEntry);
 
