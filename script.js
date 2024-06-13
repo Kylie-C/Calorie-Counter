@@ -36,6 +36,13 @@ function addEntry(){
         targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
+function calculateCalories(e){
+
+}
+// Now it's time to start putting it all together. I declared an empty calculateCalories function, which
+// takes a parameter named e. This function will be another event listener, so the first argument passed
+// will be the browser event - e is a common name for this parameter.
+
 function getCaloriesFromInputs(list){
     let calories = 0;
 
@@ -54,7 +61,6 @@ function getCaloriesFromInputs(list){
 
     return calories;
 }
-// After my for loop has completed, I returned the calories value.
 
 addEntryButton.addEventListener("click", addEntry);
 
