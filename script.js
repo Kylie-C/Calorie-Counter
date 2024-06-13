@@ -41,25 +41,18 @@ function getCaloriesFromInputs(list){
     for (const item of list) {
         const currVal = cleanInputString(item.value);
         const invalidInputMatch = isInvalidInput(currVal);
-        if (invalidInputMatch){
+        if (invalidInputMatch) {
+            alert(`Invalid Input: ${invalidInputMatch[0]}`)
         }
     }
 }
 
-// My isInvalidInput function returns String.match, which is an array of matches or null if no matches are 
-// found. 
+// Browsers have a built in alert() function, which you can use to display a pop-up message to the user. The 
+// message to display is passed as the argument to the alert(ARGUMENT) function.
 
-// In JS, values can either be truthy or falsy. A value is truthy if it evaluates to TRUE when converted
-// to a Boolean. A value is falsy if it evaluates to FALSE when converted to a Boolean. Null is an example
-// of a falsy value.
-
-// So, I needed to check if invalidInputMatch is truthy. I did this by passing the variable directly to my if
-// condition (without a comparison operator). Here's another example of checking the truthiness of helloWorld.
-
-// if (helloWorld) {
-// }
-
-// So, I added an if statement that checks if invalidInputMatch is truthy.
+// Using a template literal (which let's me insert multiple strings and variable information inside the ${}),
+// in my if block, I called the alert() function to tell the user "Invalid Input: ", followed by the first
+// value in the invalidInputMatch array [0].
 
 addEntryButton.addEventListener("click", addEntry);
 
