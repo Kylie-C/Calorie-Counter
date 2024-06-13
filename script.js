@@ -50,21 +50,11 @@ function getCaloriesFromInputs(list){
         }
 
         calories += Number(currVal);
-// Remember that return ends the execution of a function. After my if block, I needed to handle the logic for
-// when the input if valid. Because my if statement returns a value, I do not need an else statement.
-
-// I used the addition assignment operatoe += to add currVal to my calories total. I needed to use the Number
-// constructor to convert currVal to a number.
-
-// The Number constructor is a function that converts a value to a number. If the value cannot be converted, it 
-// returns NaN which stands for "Not a Number".
-
-// Example:
-//         Number('10');    // returns the number 10.
-//         Number('abc');   // returns NaN
     }
-}
 
+    return calories;
+}
+// After my for loop has completed, I returned the calories value.
 
 addEntryButton.addEventListener("click", addEntry);
 
