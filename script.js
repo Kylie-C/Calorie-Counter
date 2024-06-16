@@ -45,10 +45,14 @@ function calculateCalories(e){
     const dinnerNumberInputs = document.querySelectorAll('#dinner input[type=number]');
     const snacksNumberInputs = document.querySelectorAll('#snacks input[type=number]');
     const exerciseNumberInputs = document.querySelectorAll('#exercise input[type=number]');
+    const breakfastCalories = getCaloriesFromInputs(breakfastNumberInputs);
 }
 
-// Following the same pattern, I queried for my number inputs in the #dinner, #snacks, and #exercise elements.
-// I assigned them to variables following the naming scheme of the previous two.
+// Now that I have my lists of elements, I can pass them to my getCaloriesFromInputs function (directly below
+// this function) to extract the calorie total.
+
+// I declared a breakfastCalories variable, and assigned it the result of calling getCaloriesFromInputs
+// with breakfastNumberInputs as the argument.
 
 function getCaloriesFromInputs(list){
     let calories = 0;
