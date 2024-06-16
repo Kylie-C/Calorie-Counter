@@ -42,11 +42,13 @@ function calculateCalories(e){
 
     const breakfastNumberInputs = document.querySelectorAll('#breakfast input[type=number]');
     const lunchNumberInputs = document.querySelectorAll('#lunch input[type=number]');
+    const dinnerNumberInputs = document.querySelectorAll('#dinner input[type=number]');
+    const snacksNumberInputs = document.querySelectorAll('#snacks input[type=number]');
+    const exerciseNumberInputs = document.querySelectorAll('#exercise input[type=number]');
 }
 
-// Used the same syntax to query (again, means the same thing as "inquiry" because you're inquiring about
-// getting data from another source - in this case, HTML) my number inputs in the #lunch element and 
-// assigned them to lunchNumberInputs.
+// Following the same pattern, I queried for my number inputs in the #dinner, #snacks, and #exercise elements.
+// I assigned them to variables following the naming scheme of the previous two.
 
 function getCaloriesFromInputs(list){
     let calories = 0;
