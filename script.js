@@ -48,10 +48,13 @@ function calculateCalories(e){
 
     const breakfastCalories = getCaloriesFromInputs(breakfastNumberInputs);
     const lunchCalories = getCaloriesFromInputs(lunchNumberInputs);
+    const dinnerCalories = getCaloriesFromInputs(dinnerNumberInputs);
+    const snacksCalories = getCaloriesFromInputs(snacksNumberInputs);
+    const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
 }
 
-// Declared a lunchCalories variable, and gave it the value of calling getCaloriesFromInputs with my
-// lunchNumberInputs.
+// Followed the same pattern to declare variables for the number inputs in the #dinner, #snacks, and 
+// #exercise elements. I assigned them the appropriate getCaloriesFromInputs calls.
 
 function getCaloriesFromInputs(list){
     let calories = 0;
