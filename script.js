@@ -37,11 +37,19 @@ function addEntry(){
 }
 
 function calculateCalories(e){
-
+    e.preventDefault();
+    isError = false;
 }
-// Now it's time to start putting it all together. I declared an empty calculateCalories function, which
-// takes a parameter named e. This function will be another event listener, so the first argument passed
-// will be the browser event - e is a common name for this parameter.
+
+// I will be attaching this function to the submit event of the form (see in HTML). The submit event is 
+// triggered when the form is submitted (sounds obvious enough). The default action of the submit event is 
+// to reload the page. I need to prevent this default action using the preventDefault() method of my 
+// e parameter.
+
+// I added a line to my calculateCalories function that calls the preventDefault() method on the e 
+// parameter. Then, I reset my global error flag (which I declared at the top as isError) to false. I'm not
+// really sure why I need to declare the global error flag isError to false when that what I had stated 
+// at the top. Prehaps it's because I declared it with let?
 
 function getCaloriesFromInputs(list){
     let calories = 0;
