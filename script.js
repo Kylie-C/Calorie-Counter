@@ -39,14 +39,14 @@ function addEntry(){
 function calculateCalories(e){
     e.preventDefault();
     isError = false;
+
     const breakfastNumberInputs = document.querySelectorAll('#breakfast input[type=number]');
+    const lunchNumberInputs = document.querySelectorAll('#lunch input[type=number]');
 }
 
-// My function needs to get the values from the entries the user has added.
-
-// I declared a breakfastNumberInputs variable, and gave it the value of calling document.querySelectorAll()
-// with the selector #breakfast (the breakfast ID in HTML) input[type=number] (this was created in other
-// functions). This will return any number inputs that are in the #breakfast element. 
+// Used the same syntax to query (again, means the same thing as "inquiry" because you're inquiring about
+// getting data from another source - in this case, HTML) my number inputs in the #lunch element and 
+// assigned them to lunchNumberInputs.
 
 function getCaloriesFromInputs(list){
     let calories = 0;
