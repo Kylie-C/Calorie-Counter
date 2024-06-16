@@ -39,17 +39,14 @@ function addEntry(){
 function calculateCalories(e){
     e.preventDefault();
     isError = false;
+    const breakfastNumberInputs = document.querySelectorAll('#breakfast input[type=number]');
 }
 
-// I will be attaching this function to the submit event of the form (see in HTML). The submit event is 
-// triggered when the form is submitted (sounds obvious enough). The default action of the submit event is 
-// to reload the page. I need to prevent this default action using the preventDefault() method of my 
-// e parameter.
+// My function needs to get the values from the entries the user has added.
 
-// I added a line to my calculateCalories function that calls the preventDefault() method on the e 
-// parameter. Then, I reset my global error flag (which I declared at the top as isError) to false. I'm not
-// really sure why I need to declare the global error flag isError to false when that what I had stated 
-// at the top. Prehaps it's because I declared it with let?
+// I declared a breakfastNumberInputs variable, and gave it the value of calling document.querySelectorAll()
+// with the selector #breakfast (the breakfast ID in HTML) input[type=number] (this was created in other
+// functions). This will return any number inputs that are in the #breakfast element. 
 
 function getCaloriesFromInputs(list){
     let calories = 0;
