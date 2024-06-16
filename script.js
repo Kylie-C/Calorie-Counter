@@ -1,5 +1,6 @@
 const calorieCounter = document.getElementById('calorie-counter');
 const budgetNumberInput = document.getElementById('budget');
+// Here it is!
 const entryDropdown = document.getElementById('entry-dropdown');
 const addEntryButton = document.getElementById('add-entry');
 const clearButton = document.getElementById('clear');
@@ -51,10 +52,20 @@ function calculateCalories(e){
     const dinnerCalories = getCaloriesFromInputs(dinnerNumberInputs);
     const snacksCalories = getCaloriesFromInputs(snacksNumberInputs);
     const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
+    
+    const budgetCalories = getCaloriesFromInputs([budgetNumberInput]);
 }
 
-// Followed the same pattern to declare variables for the number inputs in the #dinner, #snacks, and 
-// #exercise elements. I assigned them the appropriate getCaloriesFromInputs calls.
+// I also needed to get the value or my #budget input. I already queried this at the top of my code (look up),
+// and set it to the budgetNumberInput variable. HOWEVER, I used getElementById, which returns an Element,
+// not a NodeList.
+
+// A NodeList is an array-like, which means I can iterate through it and it shares some common methods with 
+// an array. For my getCaloriesFromInputs function, an array will work for the argument just as well as a
+// NodeList does.
+
+// I declared a budgetCalories variable and set it to the result of calling getCaloriesFromInputs - passed an
+// array containing my budgetNumberInput as the argument.
 
 function getCaloriesFromInputs(list){
     let calories = 0;
