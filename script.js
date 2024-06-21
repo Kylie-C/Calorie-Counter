@@ -58,11 +58,11 @@ function calculateCalories(e){
     }
 
     const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
+    const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
 }
 
-// It is time to start preparing my calculations. I stated by declaring a consumedCalories variable, and 
-// assigned it the sum of breakfastCalories, lunchCalories, dinnerCalories, and snacksCalories (note that
-// the order matters for the tests). I made sure to do this AFTER my if statement.
+// After the consumedCalories are calculated, I declared a remainingCalories variable, and gave it the value
+// of subtracting consumedCalories from budgetCalories and added exerciseCalories.
 
 function getCaloriesFromInputs(list){
     let calories = 0;
