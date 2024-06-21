@@ -59,10 +59,30 @@ function calculateCalories(e){
 
     const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
     const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
+    const surplusOrDeficit = remainingCalories < 0 ? "Surplus" : "Deficit";
 }
 
-// After the consumedCalories are calculated, I declared a remainingCalories variable, and gave it the value
-// of subtracting consumedCalories from budgetCalories and added exerciseCalories.
+// I need to know if the user is in a caloric surplus or deficit. A caloric surplus is when you consume more
+// calories than you burn, and a caloric deficit is when you burn more calories than you consume. Burning as 
+// many calories as you consume is called maintenance, and you can be thought of as a surplus or deficit of 0,
+// depending on your goals.
+
+// I declared a surplusOrDeficit variable. Then used a ternary operator (I'll explain at the end) to set 
+// surplusOrDeficit to the string "Surplus" or "Deficit" depending on whether remainingCalories is less than 0
+// (remainingCalories < 0). If it is less than 0, then surplusOrDeficit should be "Surplus". Otherwise, it 
+// should be "Deficit".
+
+// The ternary operator in JS is a shorthand for the if-else statement. It's called the ternary operator
+// because it takes 3 operands: a condition, an expression to execute if the condition is true, and an
+// expression to execute if the condition is false.
+
+    // condition ? expressionIfTrue : expressionIfFalse;
+
+// An example:
+    // let age = 18;
+    // let canVote = age >= 18 ? "Yes, you can vote!" : "No, you cannot vote yet.";
+    // console.log(canVote); // Output: "Yes, you can vote!"
+
 
 function getCaloriesFromInputs(list){
     let calories = 0;
