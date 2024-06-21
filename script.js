@@ -56,17 +56,13 @@ function calculateCalories(e){
     if (isError){
         return calculateCalories;
     }
+
+    const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
 }
 
-// In the calculateCalories function, I set the global error flag (isError) to false. My getCaloriesFromInputs
-// function will set that global error flag to TRUE is an invalid input is detected, because that's what I
-// stated in the function below. So I added an if statement to my calculateCalories function that checks the
-// truthiness of my global error flag, and if it IS truthy, then I used return to end the function execution.
-
-// ChatGPT states: "Use an if statement to check the truthiness of the function's return value. If the
-// return value is truthy, the code inside the if block will execute."
-
-// This is why I only needed to write "isError" inside of the if statement instead of "isError = true".
+// It is time to start preparing my calculations. I stated by declaring a consumedCalories variable, and 
+// assigned it the sum of breakfastCalories, lunchCalories, dinnerCalories, and snacksCalories (note that
+// the order matters for the tests). I made sure to do this AFTER my if statement.
 
 function getCaloriesFromInputs(list){
     let calories = 0;
