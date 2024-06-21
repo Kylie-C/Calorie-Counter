@@ -1,6 +1,5 @@
 const calorieCounter = document.getElementById('calorie-counter');
 const budgetNumberInput = document.getElementById('budget');
-// Here it is!
 const entryDropdown = document.getElementById('entry-dropdown');
 const addEntryButton = document.getElementById('add-entry');
 const clearButton = document.getElementById('clear');
@@ -52,20 +51,22 @@ function calculateCalories(e){
     const dinnerCalories = getCaloriesFromInputs(dinnerNumberInputs);
     const snacksCalories = getCaloriesFromInputs(snacksNumberInputs);
     const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
-    
     const budgetCalories = getCaloriesFromInputs([budgetNumberInput]);
+
+    if (isError){
+        return calculateCalories;
+    }
 }
 
-// I also needed to get the value or my #budget input. I already queried this at the top of my code (look up),
-// and set it to the budgetNumberInput variable. HOWEVER, I used getElementById, which returns an Element,
-// not a NodeList.
+// In the calculateCalories function, I set the global error flag (isError) to false. My getCaloriesFromInputs
+// function will set that global error flag to TRUE is an invalid input is detected, because that's what I
+// stated in the function below. So I added an if statement to my calculateCalories function that checks the
+// truthiness of my global error flag, and if it IS truthy, then I used return to end the function execution.
 
-// A NodeList is an array-like, which means I can iterate through it and it shares some common methods with 
-// an array. For my getCaloriesFromInputs function, an array will work for the argument just as well as a
-// NodeList does.
+// ChatGPT states: "Use an if statement to check the truthiness of the function's return value. If the
+// return value is truthy, the code inside the if block will execute."
 
-// I declared a budgetCalories variable and set it to the result of calling getCaloriesFromInputs - passed an
-// array containing my budgetNumberInput as the argument.
+// This is why I only needed to write "isError" inside of the if statement instead of "isError = true".
 
 function getCaloriesFromInputs(list){
     let calories = 0;
