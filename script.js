@@ -61,13 +61,23 @@ function calculateCalories(e){
     const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
     const surplusOrDeficit = remainingCalories < 0 ? "Surplus" : "Deficit";
     
-    output.innerHTML = ``;
+    output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}"></span>`;
 }
 
-// I need to construct the HTML string that will be displayed in the output element. I started by assigning 
-// and empty template literal (remember template literals are back ticks ``, not apostrophes) to the 
-// innerHTML property of the output element (remember I already selected the element at the top of this js 
-// code with const output = document.getElementById('output');) on a new line at the end of the function.
+// When I need to lower case a string, you can use the toLowerCase() method. This method returns the calling
+// string value converted to lower case.
+
+// Example:
+    // const firstName = 'JESSICA';
+    // console.log(firstName.toLowerCase());   // Output: jessica
+
+// My output.innerHTML string needed a span element. I created that, and gave it a class attribute set to the
+// surplusOrDeficit variable. My surplusOrDeficit variable was converted to lowercase using the toLowerCase()
+// method. I did not give my span any text yet.
+
+// REMEMBER: string interpolation ${} is used within template lioterals (backticks ``) to embed (basically copy
+// and paste a value INTO the string). So I needed to use string interpolation in the code above to paste the
+// value of surplusOrDeficit into the string.
 
 
 function getCaloriesFromInputs(list){
