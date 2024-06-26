@@ -65,14 +65,14 @@ function calculateCalories(e){
         <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
         <hr>
         <p>${budgetCalories} Calories Budgeted</p>
+        <p>${consumedCalories} Calories Consumed</p>
+        <p>${exerciseCalories} Calories Burned</p>
     `;
 }
 
-// Removed the unnecessary ; after the <hr> element.
-
-// I created a paragraph <p></p> element with the text budgetCalories Calories Budgeted, using 
-// interpolation ${} to replace budgetCalories with the appropriate variable. This was placed after the 
-// horizontal line <hr> element.
+// Using the same interpolation syntax, I added a second <p> element with the text "consumedCalories Calories
+// consumed" and a third with the text "exerciseCalories Calories Burned". I remembered to replace my
+// comsumedCalories and exerciseCalories variables with the appropriate values using ${}.
 
 
 function getCaloriesFromInputs(list){
