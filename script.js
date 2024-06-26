@@ -62,12 +62,21 @@ function calculateCalories(e){
     const surplusOrDeficit = remainingCalories < 0 ? "Surplus" : "Deficit";
     
     output.innerHTML = `
-    <span class="${surplusOrDeficit.toLowerCase()}">${remainingCalories} Calorie ${surplusOrDeficit}</span>
+        <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
     `;
 }
 
-// Gave my span the text "remainingCalories Calorie surplusOrDeficit", using interpolation ${} to replace
-// remainingCalories and surplusOrDeficit with the appropriate variables.
+// When the user has a calorie surplus, the remainingCalories value will be negative. I don't want to 
+// display a negative number in the result string.
+
+// Math.abs() is a built-in JS method that will return the absolute value of a number.
+
+// Example:
+//     const num = -5;
+//     Math.abs(num);   // 5
+
+// So, in my span text, I wrapped the remainingCalories reference in Math.abs() to ensure that the value is
+// positive.
 
 
 function getCaloriesFromInputs(list){
