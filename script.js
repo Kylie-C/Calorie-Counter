@@ -63,11 +63,16 @@ function calculateCalories(e){
     
     output.innerHTML = `
         <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
-        <hr>;
+        <hr>
+        <p>${budgetCalories} Calories Budgeted</p>
     `;
 }
 
-// After my span element, I added an hr element to create a horizontal line.
+// Removed the unnecessary ; after the <hr> element.
+
+// I created a paragraph <p></p> element with the text budgetCalories Calories Budgeted, using 
+// interpolation ${} to replace budgetCalories with the appropriate variable. This was placed after the 
+// horizontal line <hr> element.
 
 
 function getCaloriesFromInputs(list){
