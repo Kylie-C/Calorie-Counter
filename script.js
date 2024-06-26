@@ -61,23 +61,13 @@ function calculateCalories(e){
     const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
     const surplusOrDeficit = remainingCalories < 0 ? "Surplus" : "Deficit";
     
-    output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}"></span>`;
+    output.innerHTML = `
+    <span class="${surplusOrDeficit.toLowerCase()}">${remainingCalories} Calorie ${surplusOrDeficit}</span>
+    `;
 }
 
-// When I need to lower case a string, you can use the toLowerCase() method. This method returns the calling
-// string value converted to lower case.
-
-// Example:
-    // const firstName = 'JESSICA';
-    // console.log(firstName.toLowerCase());   // Output: jessica
-
-// My output.innerHTML string needed a span element. I created that, and gave it a class attribute set to the
-// surplusOrDeficit variable. My surplusOrDeficit variable was converted to lowercase using the toLowerCase()
-// method. I did not give my span any text yet.
-
-// REMEMBER: string interpolation ${} is used within template lioterals (backticks ``) to embed (basically copy
-// and paste a value INTO the string). So I needed to use string interpolation in the code above to paste the
-// value of surplusOrDeficit into the string.
+// Gave my span the text "remainingCalories Calorie surplusOrDeficit", using interpolation ${} to replace
+// remainingCalories and surplusOrDeficit with the appropriate variables.
 
 
 function getCaloriesFromInputs(list){
