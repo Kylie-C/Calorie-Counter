@@ -68,11 +68,20 @@ function calculateCalories(e){
         <p>${consumedCalories} Calories Consumed</p>
         <p>${exerciseCalories} Calories Burned</p>
     `;
+
+    output.classList.remove('hide');
 }
 
-// Using the same interpolation syntax, I added a second <p> element with the text "consumedCalories Calories
-// consumed" and a third with the text "exerciseCalories Calories Burned". I remembered to replace my
-// comsumedCalories and exerciseCalories variables with the appropriate values using ${}.
+// Finally, I needed to make the #output element visible so the user can see my text. My output variable
+// is an Element, which has a classList property. This property has a .remove() method, which accepts a string
+// representing the class to remove from the element.
+
+// Example:
+//     const paragraphElement = document.getElementById('paragraph');
+//     paragraphElement.classList.remove('hide');
+
+// I used the .remove() method of the output variable's classList property to remove the hide class. The
+// word "hide" NEEDS to be inside quotes.
 
 
 function getCaloriesFromInputs(list){
