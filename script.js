@@ -99,10 +99,23 @@ function clearForm (){
       }
 
     budgetNumberInput.value = "";
+    output.innerText = "";
 }
 
-// After the loop completes, I needed to clear the budgetNumberInput. I set the value property of
-// budgetNumberInput to an empty string.
+// I also needed to clear the output element's text. I did this by setting the innerText property to an
+// empty string.
+
+// The difference between innerText and innerHTML is that innerText will not render (display) HTML elements, 
+// but will display the tags and content as raw text.
+
+// What this means is using innerHTML will render (display) the elements (such as <strong>), showing the 
+// intended text a bold.:
+    // div1.innerHTML = '<strong>Hello, world!</strong>';
+        // Output: "Hello, world!" in bold text
+    
+// innerText would have literally shown <strong>Hello, world!</strong> to the user:
+    // div2.innerText = '<strong>Hello, world!</strong>';
+        // Output: "<strong>Hello, world!</strong>" as plain text
 
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
