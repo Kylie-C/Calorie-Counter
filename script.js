@@ -91,12 +91,11 @@ function getCaloriesFromInputs(list){
     return calories;
 }
 
-addEntryButton.addEventListener("click", addEntry);
+function clearForm (){}
 
+// My final feature is to add the ability for a user to clear the form. I'm starting by declaring an empty
+// function called clearForm that isn't taking any arguments.
+
+addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
 
-// When I clicked on my Calculate Remaining Calories button, I noticed that nothing happened. I still needed
-// to mount the event listener.
-
-// So, I added an event listener to my calorieCounter element. The event type is "submit", and the callback
-// function is calculateCalories.
