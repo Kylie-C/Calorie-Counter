@@ -100,22 +100,15 @@ function clearForm (){
 
     budgetNumberInput.value = "";
     output.innerText = "";
+
+    output.classList.add('hide');
 }
 
-// I also needed to clear the output element's text. I did this by setting the innerText property to an
-// empty string.
+// To finish off this function, I needed to restore the hide class to the output element. The classList
+// property has an .add() method which is the opposite of the .remove() method. It accepts a string 
+// representing the class to add to the element.
 
-// The difference between innerText and innerHTML is that innerText will not render (display) HTML elements, 
-// but will display the tags and content as raw text.
-
-// What this means is using innerHTML will render (display) the elements (such as <strong>), showing the 
-// intended text a bold.:
-    // div1.innerHTML = '<strong>Hello, world!</strong>';
-        // Output: "Hello, world!" in bold text
-    
-// innerText would have literally shown <strong>Hello, world!</strong> to the user:
-    // div2.innerText = '<strong>Hello, world!</strong>';
-        // Output: "<strong>Hello, world!</strong>" as plain text
+// I added the hide class to my output.
 
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
