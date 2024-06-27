@@ -104,12 +104,10 @@ function clearForm (){
     output.classList.add('hide');
 }
 
-// To finish off this function, I needed to restore the hide class to the output element. The classList
-// property has an .add() method which is the opposite of the .remove() method. It accepts a string 
-// representing the class to add to the element.
-
-// I added the hide class to my output.
-
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
+clearButton.addEventListener("click", clearForm);
+
+// Added an event listener to the clearButton button. When the button is clicked, it will call the clearForm
+// function.
 
