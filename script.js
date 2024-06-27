@@ -93,26 +93,17 @@ function getCaloriesFromInputs(list){
 
 function clearForm (){
     const inputContainers = Array.from(document.querySelectorAll('.input-container'));
+
+    for (const container of inputContainers){
+        container.innerHTML = "";
+      }
 }
 
+// It's time for another loop. I created a for...of loop with a variable called container to iterate through
+// the inputContainers array. Inside the loop, I set the innerHTML property of the container to an empty
+// string. This will clear all of the contents of that input container.
 
-// Remember that document.querySelectorAll returns a NodeList, which is array-like but is not an array.
-// However, the Array object has a .from() method that accepts an array-like and returns an array. This is
-// helpful when I want access to more robust array methods, which I'll learn about in a future project.
-
-// The following example takes a NodeList of li (list) elements and converts it to an array of li elements.
-    // <ul>
-    //   <li>List 1</li>
-    //   <li>List 2</li>
-    //   <li>List 3</li>
-    // </ul>
-
-    // const listItemsArray = Array.from(document.querySelectorAll('li'));
-
-    // console.log(listItemsArray); //Output: (3) [li, li, li]
-
-// So, I wrapped my inputContainers query selector in Array.from() and did this on the same line as my 
-// declaration.
+// Remember: iterate means to repeatedly execute a set of instructions.
 
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
