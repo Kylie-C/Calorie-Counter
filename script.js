@@ -72,18 +72,6 @@ function calculateCalories(e){
     output.classList.remove('hide');
 }
 
-// Finally, I needed to make the #output element visible so the user can see my text. My output variable
-// is an Element, which has a classList property. This property has a .remove() method, which accepts a string
-// representing the class to remove from the element.
-
-// Example:
-//     const paragraphElement = document.getElementById('paragraph');
-//     paragraphElement.classList.remove('hide');
-
-// I used the .remove() method of the output variable's classList property to remove the hide class. The
-// word "hide" NEEDS to be inside quotes.
-
-
 function getCaloriesFromInputs(list){
     let calories = 0;
 
@@ -105,3 +93,10 @@ function getCaloriesFromInputs(list){
 
 addEntryButton.addEventListener("click", addEntry);
 
+calorieCounter.addEventListener("submit", calculateCalories);
+
+// When I clicked on my Calculate Remaining Calories button, I noticed that nothing happened. I still needed
+// to mount the event listener.
+
+// So, I added an event listener to my calorieCounter element. The event type is "submit", and the callback
+// function is calculateCalories.
