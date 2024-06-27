@@ -91,10 +91,13 @@ function getCaloriesFromInputs(list){
     return calories;
 }
 
-function clearForm (){}
+function clearForm (){
+    const inputContainers = document.querySelectorAll('.input-container');
+}
 
-// My final feature is to add the ability for a user to clear the form. I'm starting by declaring an empty
-// function called clearForm that isn't taking any arguments.
+// I needed to get all of the input containers. I declared an inputContainers variable, and assigned it to the
+// value of querying the document for all elements with the class input-container. Remember that the way to 
+// indicate a class is by adding a period at the beginning, which is why it's ".input-container".
 
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
