@@ -97,13 +97,12 @@ function clearForm (){
     for (const container of inputContainers){
         container.innerHTML = "";
       }
+
+    budgetNumberInput.value = "";
 }
 
-// It's time for another loop. I created a for...of loop with a variable called container to iterate through
-// the inputContainers array. Inside the loop, I set the innerHTML property of the container to an empty
-// string. This will clear all of the contents of that input container.
-
-// Remember: iterate means to repeatedly execute a set of instructions.
+// After the loop completes, I needed to clear the budgetNumberInput. I set the value property of
+// budgetNumberInput to an empty string.
 
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
